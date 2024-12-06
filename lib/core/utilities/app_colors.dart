@@ -1,4 +1,12 @@
+import 'package:flutter/material.dart';
 import 'dart:ui';
+class AppColors2 {
+  static const Color primary = Color(0xFF2260FF);
+  static const Color secondary = Color.fromRGBO(33, 150, 243, 1);
+  static const Color third = Color(0xFFF2F2F2);
+  static const Color text = Color(0xFFF2F2F2);
+}
+
 
 class AppColors {
   static const Color primaryColor = Color(0xFF2260FF);
