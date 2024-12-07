@@ -3,6 +3,8 @@ import 'package:medicalapp/Login%20Feature/Presentation/screen/signin_screen.dar
 import 'package:medicalapp/Login%20Feature/Presentation/screen/signup_screen.dart';
 import 'package:medicalapp/Login%20Feature/Presentation/screen/splash_screen.dart';
 import 'package:medicalapp/Login%20Feature/Presentation/screen/welcome_screen.dart';
+import 'package:medicalapp/Screens/profile_screen.dart';
+import 'package:medicalapp/Screens/settings_screen.dart';
 import 'package:medicalapp/home%20feature/presentation/screens/home_page.dart';
 
 class Routes{
@@ -12,6 +14,8 @@ class Routes{
   static const String signUp = '/welcome/signup';
   static const String homePage = '/home';
   static const String doctorPage = '/home/doctorpage';
+  static const String profilePage = '/home/profilepage';
+  static const String settingPage = '/home/profilepage/settingpage';
 }
 
 class AppRoutes {
@@ -28,6 +32,10 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => const SignupScreen());
       case Routes.homePage:
         return MaterialPageRoute(builder: (_) => const HomePage());
+      case Routes.profilePage:
+        return MaterialPageRoute(builder: (_) => const ProfileScreen());  
+      case Routes.settingPage:
+        return MaterialPageRoute(builder: (_) => const SettingsScreen());  
       
       default:
         return undefinedRoute();

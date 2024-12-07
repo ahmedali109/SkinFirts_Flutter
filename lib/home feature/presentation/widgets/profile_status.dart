@@ -19,10 +19,13 @@ class ProfileStatus extends StatelessWidget {
         tileColor: AppColors.secondaryColor,
         leading: const SizedBox(
           width: 40,
-          child: CircleAvatar(
-            radius: 20,
-            backgroundImage: AssetImage(
-              'assets/images/profile_pic.png',
+          child: Hero(
+            tag: 'prof',
+            child: CircleAvatar(
+              radius: 20,
+              backgroundImage: AssetImage(
+                'assets/images/profile_pic.png',
+              ),
             ),
           ),
         ),

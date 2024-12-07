@@ -4,8 +4,8 @@ Widget socialMediaIcon(String asset) {
   return Container(
     width: 50,
     height: 50,
-    decoration: BoxDecoration(
-      color: const Color(0xffCAD6FF),
+    decoration: const BoxDecoration(
+      color: Color(0xffCAD6FF),
       shape: BoxShape.circle,
     ),
     child: Center(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medicalapp/config/app_routes.dart';
 import 'package:medicalapp/core/utilities/app_colors.dart';
 import 'package:medicalapp/home%20feature/presentation/widgets/calendar.dart';
 import 'package:medicalapp/home%20feature/presentation/widgets/doctor_tile.dart';
@@ -40,8 +41,11 @@ class _HomePageState extends State<HomePage> {
               clipBehavior: Clip.none,
               scrollDirection: Axis.vertical,
               children: [
-                const ProfileStatus(
-                  userName: 'John Dee',
+                GestureDetector(
+                  onTap:()=> Navigator.pushNamed(context, Routes.profilePage),
+                  child: const ProfileStatus(
+                    userName: 'John Dee',
+                  ),
                 ),
                 const SizedBox(
                   height: 40,

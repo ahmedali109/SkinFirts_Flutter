@@ -12,6 +12,8 @@ class DoctorsInfo extends StatelessWidget {
     return Scaffold(
         backgroundColor: AppColors.secondaryColor,
         appBar: AppBar(
+          leading: IconButton(
+          icon: const Icon(Icons.arrow_back_ios_new, color: AppColors3.primary), onPressed: () { Navigator.pop(context); },),
           title: Text(doctor.name),
         ),
         body: Padding(

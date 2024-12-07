@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medicalapp/config/app_routes.dart';
 import 'package:medicalapp/core/utilities/app_colors.dart';
 
 class NavBar extends StatefulWidget {
@@ -36,7 +37,7 @@ class _NavBarState extends State<NavBar> {
                 'assets/images/home.png',
                 scale: 1.5,
               ),
-              onPressed: () {},
+              onPressed: () => Navigator.pushNamed(context, Routes.homePage),
             ),
             IconButton(
               icon: Image.asset(
@@ -50,7 +51,7 @@ class _NavBarState extends State<NavBar> {
                 'assets/images/profile.png',
                 scale: 1.5,
               ),
-              onPressed: () {},
+              onPressed: () => Navigator.pushNamed(context, Routes.profilePage),
             ),
             IconButton(
               icon: Image.asset(
