@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:screen_task/core/Utilities/app_colors.dart';
+import 'package:medicalapp/core/utilities/app_colors.dart';
+
 
 class FormWidget extends StatefulWidget {
   final String name;
@@ -38,13 +39,13 @@ class _FormWidgetState extends State<FormWidget> {
     return TextField(
       obscureText: widget.enabledPasswordField ? obscure : !obscure,
       decoration: InputDecoration(
-          enabledBorder: OutlineInputBorder(
+          enabledBorder: const OutlineInputBorder(
               borderSide: BorderSide(
             width: 2,
           )
           ),
-          focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(width: 2, color: AppColors.secondary),
+          focusedBorder: const OutlineInputBorder(
+            borderSide: BorderSide(width: 2, color: AppColors2.secondary),
           ),
           labelText: widget.name,
           suffixIcon: widget.enabledPasswordField

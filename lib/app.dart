@@ -1,16 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:screen_task/Login%20Feature/Presentation/screen/splash_screen.dart';
-import 'package:screen_task/core/Utilities/app_strings.dart';
+import 'package:medicalapp/config/app_routes.dart';
+import 'package:medicalapp/config/app_theme.dart';
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MedicalAppointement extends StatelessWidget {
+  const MedicalAppointement({super.key});
+
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: AppStrings.appName,
-      theme: ThemeData(fontFamily: AppStrings.fontFamily),
       debugShowCheckedModeBanner: false,
-      home: const SplashScreen(),
+      title: 'Medical Appointment',
+      theme: appTheme(),
+      // TODO : later changes to welcome page
+      initialRoute: Routes.splash,
+      onGenerateRoute: AppRoutes.onGenerateRoute,
+      
     );
+      
   }
 }

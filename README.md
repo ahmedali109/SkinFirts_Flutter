@@ -1,4 +1,4 @@
-# screen_task
+# medicalapp
 
 A new Flutter project.
 

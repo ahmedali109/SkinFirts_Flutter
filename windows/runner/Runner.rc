@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "screen_task" "\0"
+            VALUE "FileDescription", "medicalapp" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "screen_task" "\0"
+            VALUE "InternalName", "medicalapp" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2024 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "screen_task.exe" "\0"
-            VALUE "ProductName", "screen_task" "\0"
+            VALUE "OriginalFilename", "medicalapp.exe" "\0"
+            VALUE "ProductName", "medicalapp" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

@@ -1,6 +1,6 @@
 {
-    "name": "screen_task",
-    "short_name": "screen_task",
+    "name": "medicalapp",
+    "short_name": "medicalapp",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

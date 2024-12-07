@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:screen_task/Login%20Feature/Presentation/widget/login_widget.dart';
-import 'package:screen_task/Login%20Feature/Presentation/widget/signup_widget.dart';
-import 'package:screen_task/core/Utilities/app_colors.dart';
+import 'package:medicalapp/Login%20Feature/Presentation/widget/login_widget.dart';
+import 'package:medicalapp/Login%20Feature/Presentation/widget/signup_widget.dart';
+import 'package:medicalapp/config/app_routes.dart';
+import 'package:medicalapp/core/utilities/app_colors.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -26,22 +27,22 @@ class WelcomeScreen extends StatelessWidget {
                     width: 200,
                     height: 150,
                     child: Image.asset(
-                      "assets/image/purplelogo.png",
+                      "assets/images/purplelogo.png",
                       fit: BoxFit.contain,
                     ),
                   ),
                   const SizedBox(height: 8),
                   const Text(
                     "Skin",
-                    style: TextStyle(fontSize: 25, color: AppColors.primary),
+                    style: TextStyle(fontSize: 25, color: AppColors2.primary),
                   ),
                   const Text(
                     "First",
-                    style: TextStyle(fontSize: 25, color: AppColors.primary),
+                    style: TextStyle(fontSize: 25, color: AppColors2.primary),
                   ),
                   const Text(
                     "Dermatology center",
-                    style: TextStyle(fontSize: 12, color: AppColors.primary),
+                    style: TextStyle(fontSize: 12, color: AppColors2.primary),
                   ),
                 ],
               ),
@@ -59,9 +60,13 @@ class WelcomeScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 15),
                   // Login button
-                  SigninWidget(),
+                  SigninWidget(
+                    logIn: () => Navigator.pushNamed(context, Routes.logIn),
+                  ),
                   const SizedBox(height: 15),
-                  SignupWidget(),
+                  SignupWidget(
+                    signUp: () => Navigator.pushNamed(context, Routes.signUp),
+                  ),
                 ],
               ),
             ),
