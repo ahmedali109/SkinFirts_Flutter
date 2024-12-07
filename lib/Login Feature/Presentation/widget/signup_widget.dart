@@ -1,26 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:screen_task/Login%20Feature/Presentation/screen/signup_screen.dart';
-import 'package:screen_task/core/Utilities/app_colors.dart';
+import 'package:medicalapp/core/utilities/app_colors.dart';
 
+// ignore: must_be_immutable
 class SignupWidget extends StatelessWidget {
-  const SignupWidget({super.key});
+  VoidCallback signUp;
+  SignupWidget({super.key,required this.signUp});
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {
-        Navigator.of(context)
-            .push(MaterialPageRoute(builder: (context) => SignupScreen()));
-      },
+      onPressed: signUp,
       style: ElevatedButton.styleFrom(
         padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 5),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(40),
         ),
-        backgroundColor: AppColors.third,
+        backgroundColor: AppColors2.third,
       ),
       child: const Text(
         "Sign up",
-        style: TextStyle(fontSize: 20, color: AppColors.primary),
+        style: TextStyle(fontSize: 20, color: AppColors2.primary),
       ),
     );
   }

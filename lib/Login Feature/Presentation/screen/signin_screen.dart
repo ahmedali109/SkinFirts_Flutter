@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:screen_task/Login%20Feature/Presentation/widget/form_widget.dart';
-import 'package:screen_task/Login%20Feature/Presentation/widget/login_widget.dart';
-import 'package:screen_task/Login%20Feature/Presentation/widget/socialmedia_widget.dart';
-import 'package:screen_task/core/Utilities/app_colors.dart';
+import 'package:medicalapp/Login%20Feature/Presentation/widget/form_widget.dart';
+import 'package:medicalapp/Login%20Feature/Presentation/widget/login_widget.dart';
+import 'package:medicalapp/Login%20Feature/Presentation/widget/socialmedia_widget.dart';
+import 'package:medicalapp/config/app_routes.dart';
+import 'package:medicalapp/core/utilities/app_colors.dart';
 
 class SigninScreen extends StatelessWidget {
   const SigninScreen({super.key});
@@ -13,10 +14,10 @@ class SigninScreen extends StatelessWidget {
         appBar: AppBar(
           title: const Text(
             "Log in",
-            style: TextStyle(color: AppColors.primary),
+            style: TextStyle(color: AppColors2.primary),
           ),
           leading: IconButton(
-            color: AppColors.primary,
+            color: AppColors2.primary,
             icon: const Icon(Icons.arrow_back_ios),
             onPressed: () => Navigator.pop(context),
           ),
@@ -30,69 +31,71 @@ class SigninScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Column(
+                const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const SizedBox(height: 20),
+                    SizedBox(height: 20),
                     Text("Welcome",
                         style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
-                            color: AppColors.primary)),
-                    const SizedBox(height: 20),
+                            color: AppColors2.primary)),
+                    SizedBox(height: 20),
                     Text(
                       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                       style: TextStyle(fontSize: 15),
                     ),
                   ],
                 ),
-                SizedBox(height: 120),
+                const SizedBox(height: 120),
                 //Form
-                Column(
+                const Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     FormWidget(
                         name: "Full Name",
                         enabledPasswordField: false,
                         keyboard: "text"),
-                    const SizedBox(height: 20),
+                    SizedBox(height: 20),
                     FormWidget(
                         name: "Password",
                         enabledPasswordField: true,
                         keyboard: "text"),
-                    const SizedBox(height: 20),
+                    SizedBox(height: 20),
                     Text("forget password",
                         style: TextStyle(fontSize: 16, color: Colors.black))
                   ],
                 ),
-                SizedBox(height: 120),
+                const SizedBox(height: 120),
                 Column(children: [
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
-                  SigninWidget(),
-                  SizedBox(
+                  SigninWidget(
+                    logIn: () => Navigator.pushNamed(context, Routes.homePage),
+                  ),
+                  const SizedBox(
                     height: 15,
                   ),
-                  Text(
+                  const Text(
                     "or sign up with",
                     style: TextStyle(fontSize: 15, color: Colors.black),
                     textAlign: TextAlign.center,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                    socialMediaIcon("assets/image/google.png"),
+                    socialMediaIcon("assets/images/google.png"),
                     const SizedBox(width: 20),
-                    socialMediaIcon("assets/image/facebook.png"),
+                    socialMediaIcon("assets/images/facebook.png"),
                     const SizedBox(width: 20),
-                    socialMediaIcon("assets/image/fingerprint.png"),
+                    socialMediaIcon("assets/images/fingerprint.png"),
                   ]),
-                  SizedBox(
+                  const SizedBox(
                     height: 40,
                   ),
-                  Text("Don`t have an account Sign up")
+                  const Text("Don`t have an account Sign up")
                 ])
               ],
             ),

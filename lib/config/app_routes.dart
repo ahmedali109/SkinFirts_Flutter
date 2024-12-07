@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:medicalapp/Login%20Feature/Presentation/screen/signin_screen.dart';
+import 'package:medicalapp/Login%20Feature/Presentation/screen/signup_screen.dart';
+import 'package:medicalapp/Login%20Feature/Presentation/screen/splash_screen.dart';
+import 'package:medicalapp/Login%20Feature/Presentation/screen/welcome_screen.dart';
 import 'package:medicalapp/home%20feature/presentation/screens/home_page.dart';
 
 class Routes{
+  static const String splash = '';
   static const String welcomeScreen = '/welcome';
   static const String logIn = '/welcome/login';
   static const String signUp = '/welcome/signup';
@@ -13,12 +18,14 @@ class AppRoutes {
   
   static Route? onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
-      // case Routes.welcomeScreen:
-      //   return MaterialPageRoute(builder: (_) => const Scaffold());
-      // case Routes.logIn:
-      //   return MaterialPageRoute(builder: (_) => const Scaffold());
-      // case Routes.signUp:
-      //   return MaterialPageRoute(builder: (_) => const Scaffold());
+      case Routes.splash:
+      return MaterialPageRoute(builder: (_) => const SplashScreen());
+      case Routes.welcomeScreen:
+        return MaterialPageRoute(builder: (_) => const WelcomeScreen());
+      case Routes.logIn:
+        return MaterialPageRoute(builder: (_) => const SigninScreen());
+      case Routes.signUp:
+        return MaterialPageRoute(builder: (_) => const SignupScreen());
       case Routes.homePage:
         return MaterialPageRoute(builder: (_) => const HomePage());
       

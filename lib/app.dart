@@ -13,7 +13,7 @@ class MedicalAppointement extends StatelessWidget {
       title: 'Medical Appointment',
       theme: appTheme(),
       // TODO : later changes to welcome page
-      initialRoute: Routes.homePage,
+      initialRoute: Routes.splash,
       onGenerateRoute: AppRoutes.onGenerateRoute,
       
     );
